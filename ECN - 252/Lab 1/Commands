@@ -1,0 +1,8 @@
+1)./sim-outorder -max:inst 10000000 -redir:sim ./../Output/DefaultL2MissRate -cache:dl2 ul2:4096:64:8:l ./../voronoi.eio.gz
+2) same command as 1 - IPC
+3)./sim-outorder -max:inst 10000000 -redir:sim ./../Output/slowL1IPC -cache:dl1lat 2 -cache:il1lat 2 -cache:dl2 ul2:4096:64:8:l ./../voronoi.eio.gz
+4)./sim-outorder -max:inst 10000000 -redir:sim ./../Output/slowL2IPC -cache:dl1lat 1 -cache:dl2lat 7 -cache:dl2 ul2:4096:64:8:l ./../voronoi.eio.gz
+5)./sim-outorder -max:inst 10000000 -redir:sim ./../Output/RandomMissRate -cache:dl2 ul2:4096:64:8:r ./../voronoi.eio.gz 
+  ./sim-outorder -max:inst 10000000 -redir:sim ./../Output/RandomMissRate -cache:dl2 ul2:4096:64:8:f ./../voronoi.eio.gz
+6)./sim-outorder -max:inst 10000000 -issue:inorder true -redir:sim ./../Output/InOrderIPC -cache:dl2 ul2:4096:64:8:l ./../voronoi.eio.gz
+7)./sim-outorder -max:inst 10000000 -decode:width 8 -issue:width 8 -commit:width 8 -redir:sim ./../Output/DiffWidthIPC -redir:prog ./../Output/DiffWidthIPC2 -cache:dl2 ul2:4096:64:8:l ./../voronoi.eio.gz

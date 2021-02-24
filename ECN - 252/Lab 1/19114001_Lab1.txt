@@ -1,0 +1,13 @@
+Abhinav Saini
+19114001
+voronoi.eio.gz
+2048
+DefaultL2MissRate 0.0885
+BaselineIPC 1.7434
+slowL1IPC 1.6781
+slowL2IPC 1.7336
+RandomMissRate 0.0889 
+FIFOMissRate 0.0885  
+InOrderIPC 0.9164
+DiffWidthIPC 1.7638
+
