@@ -4,4 +4,5 @@
 |       Date       | Lab |
 |:----------------:|:----------------------------------------:|
 | 22nd February, 2021| Lab - 1 Microarchitectural Simulation | 
-| 25th February, 2021| Lab - 2 LT Spice Simulation|
+| 25th February, 2021| Lab - 2 LT Spice Simulation |
+| 7th March, 2021| Lab - 3 LT Spice NE555 Timer Simulation |
