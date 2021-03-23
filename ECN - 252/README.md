@@ -7,3 +7,4 @@
 | 25th February, 2021| Lab - 2 LT Spice Simulation |
 | 7th March, 2021| Lab - 3 LT Spice NE555 Timer Simulation |
 | 14th March, 2021| Lab - 4 Cache Simulators | 
+| 21st March, 2021| Lab - 5 4-Bit Multiplier | 
