@@ -1,0 +1,45 @@
+module Four_Bit_ALU(A, B, Select, Output, Flag_carry);
+  
+input [3:0] A,B;
+input [2:0] Select;
+output [7:0] Output;
+output Flag_carry;
+reg [7:0] Result;
+assign Output = Result;
+assign Flag_carry = Result[4]; 
+  
+always @(*)
+  
+begin
+case(Select)
+  	// Zero OUT
+	3'b0000: 
+		Result = 4'd0 ;
+  	// Addition
+	3'b0001: 
+		Result = A + B ;
+  	// Multiplication
+	3'b0010: 
+		Result = A * B;
+  	// Rotate left
+	3'b0011: 
+		Result = {A[2:0],A[3]};
+  	// Rotate Right
+	3'b0100: 
+		Result = {A[0],A[3:1]};
+  	// Greater Than
+	3'b0101: 
+		Result = (A>B)?4'd1:4'd0 ;
+  	// Equal To
+	3'b0110: 
+		Result = (A==B)?4'd1:4'd0 ;
+  	// Rotate right
+	3'b0111: 
+		Result = 4'd1 ;
+
+default:
+	Result = 4'd0 ;
+endcase
+  
+end
+endmodule

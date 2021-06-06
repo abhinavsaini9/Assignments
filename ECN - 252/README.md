@@ -12,3 +12,4 @@
 | 10th April, 2021| Lab - 7 ReLu Function and Simplistic Perceptron |
 | 18th April, 2021| Lab - 8 Verilog HDL 4-bit Mutiplier & Flip Flop |
 | 28th April, 2021| Lab - 9 Design using VHDL |
+| 13th May, 2021| Lab - 10 ALU Design |
