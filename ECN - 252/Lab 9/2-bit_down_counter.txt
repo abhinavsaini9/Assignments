@@ -1,0 +1,25 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity Two_Bit_Down_Counter is
+    Port ( clk: in std_logic;
+           E: in std_logic; 
+           counter: out std_logic_vector(1 downto 0) 
+     );
+end Two_Bit_Down_Counter;
+
+architecture Down_Behavioral of Two_Bit_Down_Counter is
+signal counter_down: std_logic_vector(1 downto 0) := "11";
+begin
+process(clk)
+begin
+if(rising_edge(clk)) then
+    if(E='1') then
+        counter_down <= counter_down - "01";
+    end if;
+ end if;
+end process;
+ counter <= counter_down;
+
+end Down_Behavioral;

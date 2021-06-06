@@ -1,0 +1,71 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+
+entity NAND_Gate is
+Port (a,b: in std_logic;
+		y: out std_logic
+        );
+end entity;
+
+
+architecture NAND_Gate_Structure of NAND_Gate is
+begin
+	y <= not (a and b);
+end architecture;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+
+entity Full_Adder is
+Port ( a, b, cin: in std_logic;
+		sum, cout : out std_logic
+	  );
+end Full_Adder;
+
+architecture Full_Adder_Structure of Full_Adder is
+
+component NAND_Gate Port (a,b: in std_logic; y: out std_logic); end component;
+signal S1, S2, S3, S4, S5, S6, S7: std_logic;
+ 
+begin
+	NG_1 : NAND_Gate Port map(a,b,S1);
+	NG_2 : NAND_Gate Port map(a,S1,S2);
+	NG_3 : NAND_Gate Port map(b,S1,S3);
+	NG_4 : NAND_Gate Port map(S2,S3,S4);
+	NG_5 : NAND_Gate Port map(S4,cin,S5);
+	NG_6 : NAND_Gate Port map(S4,S5,S6);
+	NG_7 : NAND_Gate Port map(S5,cin,S7);
+	NG_8 : NAND_Gate Port map(S6,S7,sum);
+	NG_9 : NAND_Gate Port map(S1,S5,cout);
+end architecture;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+
+entity Four_Bit_Adder is
+	port( a, b		: in	STD_LOGIC_VECTOR(3 downto 0);
+	      ans		: out	STD_LOGIC_VECTOR(3 downto 0);
+	      cout		: out	STD_LOGIC		);
+end Four_Bit_Adder;
+
+ 
+architecture Four_Bit_Adder_strcuctural of Four_Bit_Adder is
+
+component Full_Adder   port( a, b, cin	: in  STD_LOGIC;  sum, cout	: out STD_LOGIC ); end component;
+
+signal c0, c1, c2, c3 : STD_LOGIC;
+
+begin
+
+	c0 <= '0';
+	b_adder0: Full_Adder port map (a(0), b(0), c0, ans(0), c1);
+	b_adder1: Full_Adder port map (a(1), b(1), c1, ans(1), c2);
+	b_adder2: Full_Adder port map (a(2), b(2), c2, ans(2), c3);
+	b_adder3: Full_Adder port map (a(3), b(3), c3, ans(3), cout);
+
+end architecture;
+
+

@@ -1,0 +1,12 @@
+Books:
+I found the book by Perry fairly simple and good one - 
+1.Douglas L. Perry - VHDL Programming by Example
+2.Zainalabedin Navabi - VHDL modular design and synthesis of cores and systems
+
+There are many many more good books and other resources, e.g., examples part of the software you are using.
+
+Good set of online lectures:
+HDL/VHDL discussed part of this NPTEL lectures, part of the course Advanced VLSI Design - https://www.youtube.com/watch?v=kcJi8gJ1kBo&list=PLZjlBaHNchvPGHpiQCxQczOQhVMTXhk1_
+Lecture 17 to 23.
+
+Sepcifically in lecture 20 - first 10 minutes explains an example of how entity+architecture+component design process is useful.

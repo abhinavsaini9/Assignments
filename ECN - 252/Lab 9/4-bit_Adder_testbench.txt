@@ -1,0 +1,38 @@
+LIBRARY IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Four_Bit_Adder_tb is
+end Four_Bit_Adder_tb;
+
+architecture TEST of Four_Bit_Adder_tb is 
+
+component Four_Bit_Adder	port( a, b	: in	STD_LOGIC_VECTOR(3 downto 0);
+								ans	: out	STD_LOGIC_VECTOR(3 downto 0);
+							   cout : out 	STD_LOGIC		
+							);
+end component;
+
+	signal a, b		: STD_LOGIC_VECTOR(3 downto 0);
+	signal ans		: STD_LOGIC_VECTOR(3 downto 0);
+	signal cout		: STD_LOGIC;
+	
+	begin
+	U1: Four_Bit_Adder port map (a,b,ans,cout);
+	
+		process
+		begin
+
+			a <= "0000";
+			b <= "0000";
+			wait for 10 ns;
+
+			a <= "1111";
+			b <= "1111";
+			wait for 10 ns;
+            
+            a <= "1010";
+            b <= "0101";
+            wait for 10 ns;
+			
+		end process;
+END TEST;
