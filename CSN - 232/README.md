@@ -7,4 +7,5 @@
 | 7th March, 2021 | SysCalls of Different OS | 
 | 9th March, 2021 | Process Creation & Termination |
 | 16th March, 2021 | States of Process |
-| 16th Marck, 2021 | Scheduling Algorithms | 
+| 16th March, 2021 | Scheduling Algorithms | 
+| 3rd May, 2021 | [Starve-Free-Readers-Writers Problem](https://github.com/abhinavsaini9/Starve-Free-Readers-Writers-Problem)
