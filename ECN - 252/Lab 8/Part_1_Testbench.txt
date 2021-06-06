@@ -1,0 +1,24 @@
+module testbench();
+  reg [3:0] t_a,t_b;
+  wire [7:0] r;
+  
+  four_bit_multiplier dut(.a(t_a) , .b(t_b) , .result(r));
+ 
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars(1);
+  end
+ 
+  initial begin
+    t_a= 4'b 1111;
+    t_b= 4'b 1011;
+    #5
+    t_a= 4'b 1100;
+    t_b= 4'b 1011;
+    #5
+    t_a= 4'b 0101;
+    t_b= 4'b 1001;
+    #5
+    $finish();
+  end
+endmodule

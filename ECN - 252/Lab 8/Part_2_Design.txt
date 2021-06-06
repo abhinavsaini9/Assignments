@@ -1,0 +1,25 @@
+module T_Flip_Flop( clk, set, reset, t, q, qb);
+  
+  input clk;
+  input set; 
+  input t;
+  input reset;
+
+  output reg q;
+  output qb;
+  
+  assign qb = ~q;
+  
+  always @(posedge clk or posedge reset or posedge set)
+    begin
+      if(reset) begin
+        q <= 0;
+      end else if(set) begin
+        q <= 1;
+      end else begin
+        if(t) begin
+          q = ~q;
+        end
+      end
+    end
+endmodule
